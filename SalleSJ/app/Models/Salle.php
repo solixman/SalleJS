@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Salle extends Model
 {
     use HasFactory;
+
+    private $id;
+    private $name;
+    private $type;
+    private $status;
+    private $capacity;
+    private $description;
+
+
 }

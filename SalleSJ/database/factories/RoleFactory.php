@@ -13,9 +13,10 @@ class RoleFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name'=> $faker->name(),
-            'name'=> $faker 
+        return [ 
+            'name'=> $this->faker->name(),
+            'Description' => $this->faker->realText()
+            
         ];
     }
 }

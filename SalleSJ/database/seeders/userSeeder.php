@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\RoleFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
-class roleSeeder extends Seeder
+class userSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +16,5 @@ class roleSeeder extends Seeder
      */
     public function run()
     {
-        RoleFactory::factory()
-            ->count(50)
-            ->hasPosts(1)
-            ->create();
     }
 }

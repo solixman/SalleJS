@@ -14,7 +14,10 @@ class salleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'Type'=> $this->faker->name(),
+            'name'=> $this->faker->name(),
+            // 'status' =>$this->faker->
+
         ];
     }
 }
