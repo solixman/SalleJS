@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('Dashboard');
 });
 
-Route::get('/auth/login',[authentificationController::class,'login']);
+Route::get('/login',[authentificationController::class,'ShowLoginPage']);

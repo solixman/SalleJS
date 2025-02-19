@@ -21,7 +21,21 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phoneNumber',
+        'status',
+        'role_id'
+        
+    
     ];
+    
+    public function Reservation(){
+        return $this->hasMany(Reservation::class);
+    }
+    public function Role(){
+        return $this->hasOne(Role::class);
+    }
+    
+    
 
     /**
      * The attributes that should be hidden for serialization.

@@ -14,7 +14,10 @@ class ReservationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id'=>$this->faker->numberBetween(1, 10),
+            'salle_id'=>$this->faker->numberBetween(1, 10),
+            'DateDebut'=>$this->faker->date(),
+            'DateFin'=>$this->faker->date()
         ];
     }
 }
