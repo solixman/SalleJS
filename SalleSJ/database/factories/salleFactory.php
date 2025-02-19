@@ -3,8 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Salle;
 
-class salleFactory extends Factory
+class SalleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -13,11 +14,14 @@ class salleFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'Type'=> $this->faker->name(),
-            'name'=> $this->faker->name(),
-            // 'status' =>$this->faker->
-
-        ];
-    }
+        
+            return [
+                'name'=> $this->faker->name(),
+                'type' => $this->faker->randomElement(['single' ,'souble', 'conference room','party room']),
+                'status'=> $this->faker->randomElement(['availabale','unavailable','reserved']),
+                'capacity'=>$this->faker->numberBetween(1,40 ),
+                'description'=>$this->faker->realText()
+            ];
+        }
+        
 }

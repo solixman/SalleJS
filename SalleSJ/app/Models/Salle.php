@@ -9,12 +9,16 @@ class Salle extends Model
 {
     use HasFactory;
 
-    private $id;
-    private $name;
-    private $type;
-    private $status;
-    private $capacity;
-    private $description;
+    protected $fillable = [
+     'name',
+     'type',
+     'status',
+     'capacity',
+     'description'
+    ];
 
+    public function Reservation(){
+        return $this -> hasMany(Reservation::class);
+    }
 
 }
