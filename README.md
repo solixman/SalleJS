@@ -8,3 +8,9 @@ firstly i learned how to use laravel 8 even tho &
 I leaened and practiced creating tables and altering them and some none written rules such as you need to migrate tables that are needed or depended on by other tables, as well as the connection with postgres SQL.
 i also learned how to create and created controllers and models.
 and I also learned about seeders and factories, and how they are used to quickly insert data into the database and the difference  between them is that the factory is mainly used for testing and it genrates numbered random data to insert in the database, and it can work with seeders that can be used to insert a single data unit a one user or role for example, i might not have had completely learned using them but i am almost there
+
+
+19/02/2025
+learned one to one and many to many and one to many Eloquent Database Relations , fixed all factory and seeders problems and missunderstandings , now i can use them properly without any issues, 
+also learned how to comunicate and manipulate the database using create, save and other methods, as well as how are attributes defined using fillable or relation methods 
+
