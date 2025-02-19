@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class authentificationController extends Controller
 {
-    public function login(){
+//     public function login(){
         
-    }
+//     }
 
-    public 
+//    public function
 }

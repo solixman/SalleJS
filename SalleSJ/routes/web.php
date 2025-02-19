@@ -17,5 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Dashboard');
 });
+Route::get('/login', function () {
+    return view('Login');
+});
 
-Route::get('/login',[authentificationController::class,'ShowLoginPage']);
+Route::get('/auth/login',[authentificationController::class,'login']);
