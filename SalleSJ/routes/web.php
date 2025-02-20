@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authentificationController;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*

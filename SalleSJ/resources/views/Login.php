@@ -286,9 +286,10 @@ input[type=text]:placeholder {
         </div>
      
         
-        <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <form method='get' action='/auth/login'>
+        
+          <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+          <input type="text" id="password" class="fadeIn third" name="assword" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
     
