@@ -49,6 +49,7 @@ class SalleController extends Controller
     $salle->description= $request['description'];
 
     $salle->save();
+    return back();
 
 }
 public function deleteSalle(Request $request){
@@ -57,6 +58,7 @@ public function deleteSalle(Request $request){
     if($salle){
         $salle->delete();
     }
+    return back();
 }
 
 }

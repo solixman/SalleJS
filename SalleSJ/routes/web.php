@@ -32,7 +32,7 @@ Route::get('/Register', function () {
 });
 Route::get('/auth/Register',[authentificationController::class,'Register']);
 
-Route::get('/client/salle',[SalleController::class,'ShowSalles']);
+Route::get('/Admin/salle',[SalleController::class,'ShowSalles']);
 
 Route::get('/salle/update',[SalleController::class,'ShowOneSalle']);
 
