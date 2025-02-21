@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\authentificationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SalleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +20,17 @@ Route::get('/', function () {
     return view('Dashboard');
 });
 
-Route::get('/login',[authentificationController::class,'ShowLoginPage']);
+
+Route::get('/login', function () {
+    return view('Login');
+});
+Route::get('/auth/login',[authentificationController::class,'login']);
+
+
+Route::get('/Register', function () {
+    return view('Register');
+});
+Route::get('/auth/Register',[authentificationController::class,'Register']);
+
+Route::get('/Client/Dashboard',[SalleController::class,'ShowSalles']);
+
