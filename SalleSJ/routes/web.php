@@ -38,5 +38,7 @@ Route::get('/salle/update',[SalleController::class,'ShowOneSalle']);
 
 Route::get('/salle/add',[SalleController::class,'CreateSalle']);
 
+Route::get('/salle/delete',[SalleController::class,'DeleteSalle']);
+
 
 

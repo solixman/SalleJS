@@ -160,13 +160,23 @@
                 <p>Type: {{ $salle->type }}</p>
                 <p>Capacity: {{ $salle->capacity }}</p>
 
-
+                <div class="row">
+                  <div class="col-4">
                 <form action="/salle/update" method="get">
                   <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->id }}">
                   <button type="button" class="btn btn-primary">
                     update
                   </button>
                 </form>
+                </div>
+                <div class="col-4">
+                <form action="/salle/delete" method="get">
+                  <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->id }}">
+                  <input type="submit" name="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600" value="Delete">
+                    
+                </form>
+                </div>
+               </div>
 
               </div>
             </div>

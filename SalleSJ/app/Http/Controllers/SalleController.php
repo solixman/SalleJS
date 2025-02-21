@@ -51,5 +51,12 @@ class SalleController extends Controller
     $salle->save();
 
 }
+public function deleteSalle(Request $request){
+    $salle = Salle::find($request['id']);
+
+    if($salle){
+        $salle->delete();
+    }
+}
 
 }
