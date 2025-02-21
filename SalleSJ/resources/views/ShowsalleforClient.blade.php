@@ -80,16 +80,17 @@
         <div class="div" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
         @foreach($Salles as $salle)
         
-        <div class="card" style="width: 25rem; background-color:rgba(233, 227, 227, 0.5); border: 2px; ">
+        <div class="card" style="width: 23rem; background-color:rgba(233, 227, 227, 0.5); border: 2px; ">
   <img src="{{ $salle->image }}" class="card-img-top" alt="Salle image">
   <div class="card-body">
     <h5 class="card-title">{{ $salle->name }}</h5>
-    <p class="card-text">{{ $salle->price }}</p>
-    <p class="card-text">{{ $salle->ID }}</p>
-    <!-- Button trigger modal -->
-     <form action="/ReserveRoom" method="get">
-     <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->Id }}">
-    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <p class="card-text">Price: {{ $salle->price }}</p>
+    <p >Type: {{ $salle->type }}</p><p>Capacity: {{ $salle->capacity }}</p>
+   
+    
+     <form>
+     <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->id }}">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SalleModal">
   Reserve
 </button>
 </form>
@@ -102,6 +103,25 @@
         @endforeach
     </div>
     </div>
+
+<!-- <div class="modal fade" id="SalleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div> -->
+  
        
     </div>
       </div>

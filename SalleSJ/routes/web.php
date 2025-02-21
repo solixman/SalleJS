@@ -3,7 +3,7 @@
 use App\Http\Controllers\authentificationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SalleController;
-
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +32,11 @@ Route::get('/Register', function () {
 });
 Route::get('/auth/Register',[authentificationController::class,'Register']);
 
-Route::get('/Client/Dashboard',[SalleController::class,'ShowSalles']);
+Route::get('/client/salle',[SalleController::class,'ShowSalles']);
+
+Route::get('/salle/update',[SalleController::class,'ShowOneSalle']);
+
+Route::get('/salle/add',[SalleController::class,'CreateSalle']);
+
+
 
