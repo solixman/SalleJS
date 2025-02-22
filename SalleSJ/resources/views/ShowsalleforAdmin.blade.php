@@ -27,12 +27,12 @@
         <nav class="mt-6 px-4">
           <a href="#" class="flex items-center px-4 py-3 text-gray-700 bg-indigo-50 rounded-lg mb-2">
             <i class="bi bi-house-door mr-3 text-lg"></i>
-            <span>Dashboard</span>
+            <span>Salles</span>
           </a>
 
           <a href="/Admin/Project" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg mb-2 transition-colors">
             <i class="bi bi-star mr-3 text-lg"></i>
-            <span>Validation</span>
+            <span>Users</span>
           </a>
 
           <a href="/Admin/Tag" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg mb-2 transition-colors">
@@ -162,17 +162,15 @@
 
                 <div class="row">
                   <div class="col-4">
-                <form action="/salle/update" method="get">
+                <form action="/salle/update/form" method="get">
                   <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->id }}">
-                  <button type="button" class="btn btn-primary">
-                    update
-                  </button>
+                  <input type="submit" name="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600" value="Update">
                 </form>
                 </div>
                 <div class="col-4">
                 <form action="/salle/delete" method="get">
                   <input type="hidden" id="salle_id" class="fadeIn second" name="id" placeholder="id" value="{{ $salle->id }}">
-                  <input type="submit" name="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600" value="Delete">
+                  <input type="submit" name="submit" class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600" value="Delete">
                     
                 </form>
                 </div>

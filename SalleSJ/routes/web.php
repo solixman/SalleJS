@@ -34,7 +34,9 @@ Route::get('/auth/Register',[authentificationController::class,'Register']);
 
 Route::get('/Admin/salle',[SalleController::class,'ShowSalles']);
 
-Route::get('/salle/update',[SalleController::class,'ShowOneSalle']);
+Route::get('/salle/update/form',[SalleController::class,'showUpdateForm']);
+
+Route::get('/salle/update',[SalleController::class,'updateSalle']);
 
 Route::get('/salle/add',[SalleController::class,'CreateSalle']);
 

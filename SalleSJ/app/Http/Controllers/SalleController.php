@@ -17,9 +17,15 @@ class SalleController extends Controller
         return view('ShowsalleforAdmin',compact('Salles'));
     }
 
-    public function editSalle($id,Request $request){
+    public function showUpdateForm(Request $request){
 
-        $salle = Salle::find($id);
+        $salle = Salle::find($request['id']);
+        
+        return view('UpdateForm',compact('salle'));
+
+    }
+    public function updateSalle(Request $request){
+        $salle = Salle::find($request['id']);
         $salle->name = $request['name'];
         $salle->image= $request['image'];
         $salle->price=$request['price'];
@@ -27,15 +33,14 @@ class SalleController extends Controller
         $salle->status= $request['status'];
         $salle->capacity=$request['capacity'];
         $salle->description= $request['description'];
-        
         $salle->save();
-        return view('ShowsalleforAdmin',compact('Salles'));
+        return redirect('/Admin/salle');
 
     }
     
     public function ShowOneSalle(Request $request){
     $salle = Salle::find($request['id']);
-    return view('UpdateFrom',$salle);
+    return view('UpdateFrom',compact('salle'));
     }
     
    public function CreateSalle(Request $request){
