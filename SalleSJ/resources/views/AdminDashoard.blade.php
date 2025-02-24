@@ -30,7 +30,7 @@
             <span>Salles</span>
           </a>
 
-          <a href="/Admin/Project" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg mb-2 transition-colors">
+          <a href="/admin/users" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg mb-2 transition-colors">
             <i class="bi bi-star mr-3 text-lg"></i>
             <span>Users</span>
           </a>

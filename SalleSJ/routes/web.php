@@ -32,7 +32,11 @@ Route::get('/Register', function () {
 });
 Route::get('/auth/Register',[authentificationController::class,'Register']);
 
-Route::get('/Admin/salle',[SalleController::class,'ShowSalles']);
+Route::get('/admin/salle',[SalleController::class,'ShowSallesforAdmin']);
+
+Route::get('/client/salle',[SalleController::class,'ShowSallesforClient']);
+
+Route::get('/admin/users',[SalleController::class,'ShowUsersForClient']);
 
 Route::get('/salle/update/form',[SalleController::class,'showUpdateForm']);
 
@@ -42,5 +46,5 @@ Route::get('/salle/add',[SalleController::class,'CreateSalle']);
 
 Route::get('/salle/delete',[SalleController::class,'DeleteSalle']);
 
-
+Route::get('/salle/details',[SalleController::class, 'ShowRoomDetails']);
 
