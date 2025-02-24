@@ -11,11 +11,24 @@ use PDOException;
  
 class SalleController extends Controller
 {
-    public function ShowSalles(){
+    public function ShowSallesforAdmin(){
         $Salles = Salle::get();
         
-        return view('ShowsalleforAdmin',compact('Salles'));
+        return view('AdminDashoard',compact('Salles'));
     }
+
+    public function ShowSallesforClient(){
+        $Salles = Salle::get();
+        
+        return view('ClientDashboard',compact('Salles'));
+    }
+    
+    public function ShowRoomDetails(Request $request){
+        $salle = Salle::find($request['id']);
+        
+        return view('room',compact('salle'));
+    }
+
 
     public function showUpdateForm(Request $request){
 
@@ -24,6 +37,11 @@ class SalleController extends Controller
         return view('UpdateForm',compact('salle'));
 
     }
+    
+
+
+
+
     public function updateSalle(Request $request){
         $salle = Salle::find($request['id']);
         $salle->name = $request['name'];
@@ -34,7 +52,7 @@ class SalleController extends Controller
         $salle->capacity=$request['capacity'];
         $salle->description= $request['description'];
         $salle->save();
-        return redirect('/Admin/salle');
+        return redirect('/admin/salle');
 
     }
     

@@ -14,3 +14,6 @@ and I also learned about seeders and factories, and how they are used to quickly
 learned one to one and many to many and one to many Eloquent Database Relations , fixed all factory and seeders problems and missunderstandings , now i can use them properly without any issues, 
 also learned how to comunicate and manipulate the database using create, save and other methods, as well as how are attributes defined using fillable or relation methods 
 
+
+Lien de jira
+https://solixman27.atlassian.net/jira/software/projects/SJS/boards/4?atlOrigin=eyJpIjoiZjlhYmM4ZWZjZjQwNDE4OTg1YTEzODQ2YTE1NGVkYzMiLCJwIjoiaiJ9
