@@ -16,6 +16,8 @@ class CreateSallesTable extends Migration
         Schema::create('salles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image');
+            $table->string('price');
             $table->string('type');
             $table->string('status');
             $table->string('capacity');
