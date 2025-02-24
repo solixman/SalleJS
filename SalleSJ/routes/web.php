@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authentificationController;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SalleController;
 use App\Models\Role;
@@ -19,6 +20,10 @@ use App\Models\Role;
 Route::get('/', function () {
     return view('Dashboard');
 });
+Route::get('/login', function () {
+    return view('Login');
+});
+
 
 
 Route::get('/login', function () {

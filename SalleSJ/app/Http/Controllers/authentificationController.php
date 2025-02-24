@@ -13,4 +13,5 @@ class authentificationController extends Controller
     public function register(Request $request){
         
     }
+
 }
